@@ -1,0 +1,129 @@
+compute: HC1 = calibrate(HC,5,4,2.2)
+
+compute: SH1 = calibrate(SH,5,4,1)
+
+compute: RS1 = calibrate(RS,5,4,2.6)
+
+
+
+Analysis of Necessary Conditions
+
+Outcome variable: RS1
+
+Conditions tested:
+      Consistency    Coverage
+CB    0.630250       0.544438
+~CB   0.369750       0.486714
+SS    0.820099       0.566750
+~SS   0.179901       0.382538
+HS    0.519083       0.494793
+~HS   0.480918       0.553917
+EI    0.947654       0.569478
+~EI   0.052346       0.206714
+HL    0.834027       0.658714
+~HL   0.165973       0.254889
+HC1   0.898709       0.733849
+~HC1  0.437109       0.631065
+FPE   0.799588       0.514023
+~FPE  0.200412       0.554000
+SH1   0.776797       0.769008
+~SH1  0.584560       0.644375
+
+
+Analysis of Necessary Conditions
+
+Outcome variable: ~RS1
+
+Conditions tested:
+      Consistency    Coverage
+CB    0.574910       0.455562
+~CB   0.425090       0.513286
+SS    0.683440       0.433250
+~SS   0.316559       0.617462
+HS    0.577789       0.505207
+~HS   0.422211       0.446083
+EI    0.781007       0.430522
+~EI   0.218993       0.793286
+HL    0.471073       0.341286
+~HL   0.528927       0.745111
+HC1   0.721418       0.540366
+~HC1  0.644674       0.853763
+FPE   0.824112       0.485977
+~FPE  0.175888       0.446000
+SH1   0.648302       0.588726
+~SH1  0.745632       0.753958
+**********************
+*TRUTH TABLE ANALYSIS*
+**********************
+
+File:  C:/Users/Yang/Desktop/data3.csv
+Model: RS1 = f(CB, SS, HS, EI, HL, HC1, FPE, SH1)
+Algorithm: Quine-McCluskey
+
+--- COMPLEX SOLUTION ---
+frequency cutoff: 1
+consistency cutoff: 0.811151
+                                    raw       unique              
+                                  coverage    coverage   consistency 
+                                 ----------  ----------  ----------  
+~CB*~HS*EI*HL*HC1*SH1            0.116702    0.0525268   1           
+SS*~HS*EI*HL*HC1*FPE             0.250371    0.0245994   0.799099    
+~HS*EI*HL*HC1*FPE*SH1            0.233115    0.0384184   0.883466    
+CB*SS*EI*HL*HC1*FPE              0.389827    0.210107    0.831097    
+~CB*SS*HS*EI*HL*HC1*~FPE         0.0525269   0.0525268   1           
+CB*SS*EI*~HL*HC1*~FPE*SH1        0.0362479   0.0362479   1           
+CB*SS*~HS*HL*HC1*FPE*SH1         0.148645    0.0181239   0.830269    
+~CB*SS*HS*HL*HC1*FPE*SH1         0.126868    0.126868    1           
+CB*~SS*HS*EI*HL*HC1*~FPE*SH1     0.0181239   0.0181239   1           
+solution coverage: 0.821438
+solution consistency: 0.911671
+
+
+**********************
+*TRUTH TABLE ANALYSIS*
+**********************
+
+File:  C:/Users/Yang/Desktop/data3.csv
+Model: RS1 = f(CB, SS, HS, EI, HL, HC1, FPE, SH1)
+Algorithm: Quine-McCluskey
+
+--- PARSIMONIOUS SOLUTION ---
+frequency cutoff: 1
+consistency cutoff: 0.811151
+                   raw       unique              
+                 coverage    coverage   consistency 
+                ----------  ----------  ----------  
+HL*HC1          0.78519     0.686611    0.873616    
+EI*~FPE*SH1     0.151503    0.0529248   0.990539    
+solution coverage: 0.838115
+solution consistency: 0.879308
+
+
+**********************
+*TRUTH TABLE ANALYSIS*
+**********************
+
+File:  C:/Users/Yang/Desktop/data3.csv
+Model: RS1 = f(CB, SS, HS, EI, HL, HC1, FPE, SH1)
+Algorithm: Quine-McCluskey
+
+--- INTERMEDIATE SOLUTION ---
+frequency cutoff: 1
+consistency cutoff: 0.811151
+Assumptions:
+                                    raw       unique              
+                                  coverage    coverage   consistency 
+                                 ----------  ----------  ----------  
+~CB*~HS*EI*HL*HC1*SH1            0.116702    0.0525268   1           
+SS*~HS*EI*HL*HC1*FPE             0.250371    0.0245994   0.799099    
+~HS*EI*HL*HC1*FPE*SH1            0.233115    0.0384184   0.883466    
+CB*SS*EI*HL*HC1*FPE              0.389827    0.210107    0.831097    
+~CB*SS*HS*EI*HL*HC1*~FPE         0.0525269   0.0525268   1           
+CB*SS*EI*~HL*HC1*~FPE*SH1        0.0362479   0.0362479   1           
+CB*SS*~HS*HL*HC1*FPE*SH1         0.148645    0.0181239   0.830269    
+~CB*SS*HS*HL*HC1*FPE*SH1         0.126868    0.126868    1           
+CB*~SS*HS*EI*HL*HC1*~FPE*SH1     0.0181239   0.0181239   1           
+solution coverage: 0.821438
+solution consistency: 0.911671
+
+
